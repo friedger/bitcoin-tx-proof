@@ -12,7 +12,9 @@
     "strictNullChecks": true,
     "lib": ["ES2020", "DOM"],
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "verbatimModuleSyntax": false
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
