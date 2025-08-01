@@ -1,4 +1,9 @@
-import { calculateWTXID, calculateMerkleRoot, getMerkleProof, verifyMerkleProof } from '../merkle';
+import {
+  calculateWTXID,
+  calculateMerkleRoot,
+  getMerkleProof,
+  verifyMerkleProof,
+} from '../merkle.js';
 
 describe('Merkle Tree Calculations', () => {
   // Using real Bitcoin transaction hex from testnet

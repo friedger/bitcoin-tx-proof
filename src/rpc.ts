@@ -1,7 +1,7 @@
-import axios, { AxiosError } from 'axios';
-import RateLimit from 'axios-rate-limit';
+import axios, { AxiosError, AxiosInstance } from 'axios';
+import rateLimit from 'axios-rate-limit';
 import NodeCache from 'node-cache';
-import { BitcoinRPCConfig } from './types';
+import { BitcoinRPCConfig } from './types.js';
 
 const DEBUG = process.env.DEBUG === 'true';
 
@@ -15,7 +15,7 @@ export class BitcoinRPC {
   private url: string;
   private auth?: { username: string; password: string };
   private cache: NodeCache;
-  private axiosInstance;
+  private axiosInstance: AxiosInstance;
 
   constructor(config: BitcoinRPCConfig) {
     this.url = config.url;
@@ -26,7 +26,7 @@ export class BitcoinRPC {
       };
     }
     this.cache = new NodeCache({ stdTTL: 600 }); // 10 minute cache
-    this.axiosInstance = RateLimit(axios.create(), {
+    this.axiosInstance = rateLimit(axios.create(), {
       maxRequests: 10,
       perMilliseconds: 1000,
     });

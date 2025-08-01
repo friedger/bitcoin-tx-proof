@@ -1,5 +1,5 @@
-import { bitcoinTxProof } from '..';
-import { BitcoinRPCConfig } from '../types';
+import { bitcoinTxProof } from '../index.js';
+import { BitcoinRPCConfig } from '../types.js';
 
 const rpcConfig: BitcoinRPCConfig = {
   url: 'http://localhost:8332',

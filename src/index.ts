@@ -5,9 +5,9 @@ import {
   getMerkleProof,
   hash256,
   MerkleProofStep,
-} from './merkle';
-import { BitcoinRPC } from './rpc';
-import { BitcoinRPCConfig, TxProofResult } from './types';
+} from './merkle.js';
+import { BitcoinRPC } from './rpc.js';
+import { BitcoinRPCConfig, TxProofResult } from './types.js';
 import { bytesToHex } from '@clarigen/core';
 
 const DEBUG = process.env.DEBUG === 'true';

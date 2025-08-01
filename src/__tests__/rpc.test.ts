@@ -1,12 +1,12 @@
-import { BitcoinRPC } from '../rpc';
+import { BitcoinRPC } from '../rpc.js';
 import axios, { AxiosInstance } from 'axios';
-import RateLimit from 'axios-rate-limit';
+import axiosRateLimit from 'axios-rate-limit';
 
 jest.mock('axios');
 jest.mock('axios-rate-limit');
 
 const mockedAxios = axios as jest.Mocked<typeof axios>;
-const mockedRateLimit = RateLimit as jest.MockedFunction<typeof RateLimit>;
+const mockedRateLimit = axiosRateLimit as jest.MockedFunction<typeof axiosRateLimit>;
 
 type MockedRateLimitedAxios = AxiosInstance & {
   getQueue: jest.Mock;

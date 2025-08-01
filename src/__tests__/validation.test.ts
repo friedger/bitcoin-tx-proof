@@ -1,4 +1,4 @@
-import { validateTxId, validateBlockHeight, validateRPCConfig } from '../validation';
+import { validateTxId, validateBlockHeight, validateRPCConfig } from '../validation.js';
 
 describe('Input Validation', () => {
   test('validateTxId accepts valid transaction ID', () => {

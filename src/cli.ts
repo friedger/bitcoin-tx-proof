@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { bitcoinTxProof } from './index';
-import { validateTxId } from './validation';
-import { BitcoinRPC } from './rpc';
+import { bitcoinTxProof } from './index.js';
+import { validateTxId } from './validation.js';
+import { BitcoinRPC } from './rpc.js';
 
 // Move DEBUG to global scope and set it directly
 let DEBUG = false;
